@@ -38,13 +38,17 @@
 
 `git commit -a` Автоматическое индексирование файлов перед коммитом
 
-### Клонирование репозитория
+### Commit difference
 
-`git clone https://github.com/crealime/some` Клонирование по HTTP
+`git diff --check 8dgv8 rg871` Warn if changes introduce conflict markers or whitespace errors.
 
-`git clone https://github.com/crealime/some project` Клонирование по HTTP в создаваемую папку project
+### Cloning a repository
 
-`git clone git@github.com:crealime/some.git` Клонирование по SSH
+`git clone https://github.com/crealime/some` Cloning via HTTP
+
+`git clone https://github.com/crealime/some project` Cloning via HTTP to the created project folder
+
+`git clone git@github.com:crealime/some.git` Cloning via SSH
 
 ### Проверка состояния
 
