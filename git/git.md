@@ -1,42 +1,42 @@
 ## GIT
 
-### Справка
+### Help
 
-`git help <команда>` Справка по определенной команде. Например `git help config` — справка по команде config
+`git help <command>` Help for a specific command. For example `git help config` — help for config command
 
-`git <команда> --help` Справка по определенной команде.
+`git <команда> --help`  Help for a specific command.
 
-`man git-<команда>` Справка по определенной команде.
+`man git-<команда>`  Help for a specific command.
 
-### Конфигурация
+### Config
 
-`git config --global user.name "John Doe"` Глобальная настройка имени пользователя
+`git config --global user.name "John Doe"` Global username setting
 
-`git config --global user.email johndoe@example.com` Глобальная настройка email пользователя
+`git config --global user.email johndoe@example.com` Global user email setting
 
-`git config --list` Проверка настроек
+`git config --list` Check the settings
 
-### Инициализация репозитория
+### Repository initialization
 
 `git init`
 
-### Работа с состоянием файлов
+### Working with file state
 
-`git add main.js` Добавление main.js в Stage Area
+`git add main.js` Add main.js to Stage Area
 
-`git add *.js` Добавление всех js из текущей папки файлов в Stage Area
+`git add *.js` Add all js files from current folder to Stage Area
 
-`git add .` Добавление всех файлов в Stage Area
+`git add .` Add all files to Stage Area
 
-### Коммиты
+### Commits
 
-`git commit` Коммит с необходимостью написать комментарий в текстовом редакторе (Vim default)
+`git commit` Commit with the need to write a comment in a text editor (Vim default)
 
-`git commit -v` Коммит с необходимостью написать комментарий в текстовом редакторе с более развернутой изначальной информацией об изменениях
+`git commit -v` Commit with the need to write a comment in a text editor with more detailed initial information about the changes
 
-`git commit -m 'First commit'` Коммит с комментарием, написанными в командной строке
+`git commit -m 'First commit'` Commit with comments written on the command line
 
-`git commit -a` Автоматическое индексирование файлов перед коммитом
+`git commit -a` Automatic file indexing before commit
 
 ### Commit difference
 
@@ -50,151 +50,151 @@
 
 `git clone git@github.com:crealime/some.git` Cloning via SSH
 
-### Проверка состояния
+### Status check
 
-`git status` Вывод состояния файлов
+`git status` File status output
 
-`git status -s` или `git status --short` Вывод упрощенного варианта
+`git status -s` or `git status --short` Simplified output
 
-`git diff` Вывод того, что было изменено, но не проиндексировано
+`git diff` Display of what has been modified but not indexed
 
-`git diff --staged` Вывод того, что проиндексировано, но не зафиксировано
+`git diff --staged` Display what is indexed but not committed
 
-`git diff --cached` Проиндексированные изменения (удобно если есть и не проиндексированные одновременно)
+`git diff --cached` Indexed changes (handy if there are and not indexed at the same time)
 
-### Удаление файлов
+### Delete files
 
-`rm some.js` Удаление самого файла из рабочей папки (Linux)
+`rm some.js` Delete file from the working folder (Linux)
 
-`git rm some.js` Индексирование удаления файла (и удаление самого файла, если он еще есть в папке)
+`git rm some.js` Index deleting file (and deleting the file itself if it's still in the folder)
 
-`git rm --cached some.js` Перестать отслеживать файл, но оставить его в рабочей папке
+`git rm --cached some.js` Stop tracking the file, but leave it in the working folder
 
-`git rm -r --cached some-folder` Перестать отслеживать папку some-folder и ее содержимое
+`git rm -r --cached some-folder` Stop monitoring some-folder and its contents
 
-### Переименование файлов
+### Renaming files
 
-`git mv some.js new-some.js` Переименование файла с последующим индексированием. Эквивалентно последовательности команд:
+`git mv some.js new-some.js` Rename file with subsequent indexing. Equivalent to a sequence of commands:
 
 `mv some.js new-some.js`
 `git rm some.js`
 `git add new-some.js`
 
-### История версий
+### Version history
 
-`git log` Вывод сохраненных версий в обратном порядке
+`git log` Display saved versions in reverse order
 
-`git log -p -2` Вывод разницы между коммитами с ограничением в 2 коммита
+`git log -p -2` Display the difference between commits with a limit of 2 commits
 
-`git log --stat` Вывод разницы с краткой статистикой
+`git log --stat` Display the difference with brief statistics
 
-`git log --pretty=oneline` Вывод коммитов в одну строку
+`git log --pretty=oneline` Display commits in one line
 
-`git log --graph` Вывод коммитов с простым графическим оформлением
+`git log --graph` Display commits with a simple graphical design
 
 #### Распространенные параметры команды git log
 
-| Параметр          | Описание                                                                                                                                 |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `-p`              | Показывает изменения, внесенные в каждую версию                                                                                          |
-| `--stat`          | Показывает статистику измененных файлов в каждом коммите                                                                                 |
-| `--shortstat`     | Показывает только строку с изменениями/вставками/удалениями от команды --stat                                                            |
-| `--name-only`     | Показывает список измененных файлов после информации о коммите                                                                           |
-| `--name-status`   | Показывает список измененных файлов с информацией о добавлении/изменении/удалении                                                        |
-| `--abbrev-commit` | Показывает только первые несколько символов контрольной суммы SHA-1 вместо всех 40                                                       |
-| `--relative-date` | Показывает дату не в полном, а в относительном формате (например, «2 недели назад»)                                                      |
-| `--graph`         | Показывает ASCII-граф истории ветвлений и слияний вместе с выводом команды log                                                           |
-| `--pretty`        | Показывает коммиты в альтернативном формате. Возможны параметры oneline, short, full, fuller и format (с указанием вашей версии формата) |
+| Parameter                 | Description                                                                                                                          |
+|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `-p`                      | Changes made in each version                                                                                                         |
+| `--stat`                  | Statistics of changed files in each commit                                                                                           |
+| `--shortstat`             | Only line with changes/inserts/deletions from --stat command                                                                         |
+| `--name-only`             | List of changed files after the commit information                                                                                   |
+| `--name-status`           | List of modified files with information about adding/changing/deleting                                                               |
+| `--abbrev-commit`         | Only first few characters of the SHA-1 checksum instead of all                                                                       |
+| `--relative-date`         | Date not in full, but in relative format (for example, "2 weeks ago")                                                                |
+| `--graph`                 | ASCII branch and merge history graph along with the output of the log command                                                        |
+| `--pretty`                | Commits in an alternate format. Possible options are oneline, short, full, fuller and format (specifying your version of the format) |
 
-#### Параметры для форматирования
+#### Options for formatting
 
-`git log --pretty=format:"%h - %an, %ar : %s"` Вывод коммитов в определенном формате
+`git log --pretty=format:"%h - %an, %ar : %s"` Display commits in a specific format
 
-| Параметр  | Описание выводимых данных                                |
-|-----------|----------------------------------------------------------|
-| `%H`      | Хеш-код коммита                                          |
-| `%h`      | Сокращенный хеш-код коммита                              |
-| `%T`      | Хеш-код дерева                                           |
-| `%t`      | Сокращенный хеш-код дерева                               |
-| `%P`      | Хеш-код родительских коммитов                            |
-| `%p`      | Сокращенный хеш-код родительских коммитов                |
-| `%an`     | Имя автора                                               |
-| `%ae`     | Электронная почта автора                                 |
-| `%ad`     | Дата создания оригинала (формат учитывает –date= option) |
-| `%ar`     | Дата создания оригинала, в относительной форме           |
-| `%cn`     | Имя создателя версии                                     |
-| `%ce`     | Электронная почта создателя версии                       |
-| `%cd`     | Дата создания версии                                     |
-| `%cr`     | Дата создания версии в относительном формате             |
-| `%s`      | Комментарий                                              |
+| Parameter | Description of output data                                             |
+|-----------|------------------------------------------------------------------------|
+| `%H`      | The commit hash code                                                   |
+| `%h`      | Shorthand commit hash code                                             |
+| `%T`      | Tree hash code                                                         |
+| `%t`      | Reduced tree hash code                                                 |
+| `%P`      | Hash code of parent commits                                            |
+| `%p`      | Shortened hash code of parent commits                                  |
+| `%an`     | Author's name                                                          |
+| `%ae`     | Author email                                                           |
+| `%ad`     | Creation date of the original (the format respects the --date= option) |
+| `%ar`     | Creation date of the original, in relative form                        |
+| `%cn`     | Version creator name                                                   |
+| `%ce`     | Version Creator email                                                  |
+| `%cd`     | Version creation date                                                  |
+| `%cr`     | Version creation date in relative format                               |
+| `%s`      | Comment                                                                |
 
-`git log --since=2.weeks` Вывод коммитов за последние две недели
+`git log --since=2.weeks` Commits for the last two weeks
 
-`git log --author=...` Вывод коммитов от определенного автора
+`git log --author=...` Commits from a specific author
 
 ### Параметры, ограничивающие вывод команды git log
 
-| Параметр                   | Описание                                                                                         |
-|----------------------------|--------------------------------------------------------------------------------------------------|
-| `-(n)`                     | Показывает только последние n коммитов                                                           |
-| `--since`, <br>`--after`   | Показывает только коммиты, внесенные после указанной даты                                        |
-| `--until`, <br>`--before`  | Показывает только коммиты, внесенные до указанной даты                                           |
-| `--author`                 | Показывает только коммиты определенного автора                                                   |
-| `--committer`              | Показывает только коммиты, внесенные определенным участником                                     |
-| `--grep`                   | Показывает только коммиты с сообщением фиксации, содержащим указанную строку                     |
-| `-S`                       | Показывает только коммиты, в которых добавленный или удаленный код совпадает с указанной строкой |
+| Parameter                 | Description                                                         |
+|---------------------------|---------------------------------------------------------------------|
+| `-(n)`                    | Only the last n commits                                             |
+| `--since`, <br>`--after`  | Only commits made after the specified date                          |
+| `--until`, <br>`--before` | Only commits made before the specified date                         |
+| `--author`                | Only commits by a specific author                                   |
+| `--committer`             | Only commits made by a specific contributor                         |
+| `--grep`                  | Only commits with a commit message containing the specified string  |
+| `-S`                      | Only commits where added or removed code matches the specified line |
 
-## Отмена изменений
+## Undo changes
 
-`git commit –amend` Перезапись последнего коммита
+`git commit –amend` Rewriting the last commit
 
-`git checkout -- some.js` Отмена изменений в определенном файле к предыдущему коммиту.  Выполнять аккуратно, с пониманием последствий!!!
+`git checkout -- some.js` Revert changes in a specific file to the previous commit. Perform carefully, with an understanding of the consequences!!!
 
-`git reset --hard` Отмена всех изменений в рабочей папке к предыдущему коммиту. Выполнять аккуратно, с пониманием последствий!!!
+`git reset --hard` Revert all changes in the working folder to the previous commit. Perform carefully, with an understanding of the consequences!!!
 
-`git reset HEAD some.js` Отмена индексирования файла
+`git reset HEAD some.js` Revert file indexing
 
-## Удаленные репозитории
+## Remote repositories
 
-`git remote` Вывод коротких записей об удаленных репозиториях
+`git remote` Display short records about remote repositories
 
-`git remote -v` Вывод записей об удаленных репозиториях с информацией об URL
+`git remote -v` Display entries about remote repositories with URL information
 
-`git remote add newremote https://github.com/paulboone/ticgit` Добавление удаленного репозитория под именем newremote
+`git remote add newremote https://github.com/paulboone/ticgit` Add a remote repository called newremote
 
-`git fetch pb` Теперь можно скачать информацию из репо, используя короткое имя. Извлечение данных из удаленного репо без слияния с локальными ветками.
+`git fetch pb` Now you can download the information from the repo using the short name. Pulling data from a remote repo without merging into local branches.
 
 `git fetch --all` Get all up-to-date information from server
 
-`git pull` Скачивание актуальной информации из удаленного репо и выполнение слияния с локальной веткой, настроенной на слежение за удаленной.
+`git pull` Download up-to-date information from a remote repo and merging with a local branch configured to follow the remote one.
 
 `git push origin master` Send data to a remote repository. Branch master to the server origin.
 
 `git push origin locbr:servbr` Send branch locbr to the server origin with different name servbr
 
-`git remote show origin` Вывод данных об удаленном репозитории
+`git remote show origin` Display data about a remote repository
 
-`git remote rename old new` Переименование удаленного репозитория (изменение короткого имени) с old на new
+`git remote rename old new` Rename remote repository (changing short name) from old to new
 
-`git remote rm new` Удаление ссылки на удаленный репозиторий
+`git remote rm new` Remove a link to a remote repository
 
-## Теги
+## Tags
 
-`git tag` Вывод всех доступных тегов
+`git tag` Display all available tags
 
-`git tag -l ‚v1.8.5*'` Вывод тегов версии v1.8.5
+`git tag -l ‚v1.8.5*'` Display tags v1.8.5
 
-`git tag -a v1.4 -m 'my version 1.4'` Добавление полноценного тега с комментарием
+`git tag -a v1.4 -m 'my version 1.4'` Add a full tag with a comment
 
-`git tag v1.4-lw` Добавление легковесного тега (только ссылка на коммит)
+`git tag v1.4-lw` Add a lightweight tag (commit link only)
 
-`git tag -a v1.2 9fceb02` Добавление тега коммиту `9fceb02`
+`git tag -a v1.2 9fceb02` Adding tag to the commit `9fceb02`
 
-`git show v1.2` Вывод информации о теге
+`git show v1.2` Display information about a tag
 
-`git push origin v1.5` Отправка тега в удаленный репозиторий
+`git push origin v1.5` Send a tag to a remote repository
 
-`git push origin --tags` Отправка всех тегов в удаленный репозиторий
+`git push origin --tags` Send all tags to a remote repository
 
 ## Aliases
 
@@ -254,7 +254,7 @@
 
 `git checkout somebr` `git rebase master` Moving commits to the branch `master` from the branch `somebr`
 
-`git checkout somebr` `git rebase master` Moving commits to the branch `master` from the branch `somebr`
+
 
 
 
