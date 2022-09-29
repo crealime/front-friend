@@ -50,11 +50,11 @@
 
 `git diff` Changes in files.
 
-`git diff НЕАD` Differences between НЕАD and the current state of the work folder.
+`git diff НЕАD` Differences between НЕАD and the current state of the work directory.
 
 `git diff --cached` Differences between НЕАD and the indexed changes.
 
-`git diff 8dgv8` Differences between 8dgv8 commit and the current state of the work folder.
+`git diff 8dgv8` Differences between 8dgv8 commit and the current state of the work directory.
 
 `git diff --cached 8dgv8` or `git diff --staged 8dgv8` Difference between indexed changes and 8dgv8 commit.
 
@@ -68,7 +68,7 @@
 
 `git reset --mixed 8dgv8` Default. Move HEAD to the 8dgv8 commit. Index files will be changed. Work folder will remain unchanged.
 
-`git reset --hard 8dgv8` Move HEAD to the 8dgv8 commit. Index files and work folder will be changed.
+`git reset --hard 8dgv8` Move HEAD to the 8dgv8 commit. Index files and work directory will be changed.
 
 ### Status check
 
@@ -84,11 +84,11 @@
 
 ### Delete files
 
-`rm some.js` Delete file from the work folder (Linux).
+`rm some.js` Delete file from the work directory (Linux).
 
 `git rm some.js` Index deleting file (and deleting the file itself if it's still in the folder).
 
-`git rm --cached some.js` Stop tracking the file, but leave it in the work folder.
+`git rm --cached some.js` Stop tracking the file, but leave it in the work directory.
 
 `git rm -r --cached some-folder` Stop monitoring some-folder and its contents.
 
@@ -170,7 +170,7 @@
 
 `git checkout -- some.js` Revert changes in a specific file to the previous commit. Perform carefully, with an understanding of the consequences!!!
 
-`git reset --hard` Revert all changes in the work folder to the previous commit. Perform carefully, with an understanding of the consequences!!!
+`git reset --hard` Revert all changes in the work directory to the previous commit. Perform carefully, with an understanding of the consequences!!!
 
 `git reset HEAD some.js` Revert file indexing.
 
@@ -190,7 +190,7 @@
 
 `git push origin master` Send data to a remote repository. Branch master to the server origin.
 
-`git push origin locbr:servbr` Send branch locbr to the server origin with different name servbr.
+`git push origin locbr:servbr` Send branch `locbr` to the server origin with different name `servbr`.
 
 `git remote show origin` Display data about a remote repository.
 
@@ -250,8 +250,6 @@
 
 `git log --oneline --decorate –graph --all` Show commit, pointer locations, and points of divergence.
 
-`git checkout master` `git merge testing` Merge the branch `master` into the branch `testing`.
-
 `git branch -d testing` Delete a branch.
 
 `git branch -d` Delete all branches, that are merged into the current branch.
@@ -272,28 +270,33 @@
 
 ### Cherry-pick
 
+`git cherry-pick 9fceb02` Copy a commit to the current branch
+
+`git cherry-pick 9fceb02 --edit` With new comment
+
+`git cherry-pick 9fceb02 --no-commit` Copy changes from commit to the work directory (new commit in current branch not created)
+
+### Merge
+
+`git checkout master` `git merge testing` Merge the branch `testing` into the branch `master`.
+
+`git merge master testing` The same. Merge the branch `testing` into the branch `master`. 
 
 
 ### Rebase
 
 `git checkout somebr` `git rebase master` Moving commits to the branch `master` from the branch `somebr`.
 
+`git rebase -i HEAD~4` Interactive rebase 4 last commits in the current branch
 
+`git rebase -i master` Interactive rebase to the branch `master`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| Parameter in interactive rebase | Description                                    |
+|---------------------------------|------------------------------------------------|
+| `p` or `pick`                   | Without changes                                |
+| `r` or `reword`                 | Without changes, but with new commit message   |
+| `f` or `fixup`                  | Add to previous commit                         |
+| `s` or `squash`                 | Add to previous commit with his commit message |
+| `d` or `drop`                   | Remove commit                                  |
 
 
