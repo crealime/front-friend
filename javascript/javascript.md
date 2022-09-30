@@ -4,5 +4,7 @@
 
 ### [Ajax](ajax.md)
 
+### [Fetch](fetch.md)
+
 ---
 [Home](/README.md)

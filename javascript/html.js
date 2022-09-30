@@ -13,7 +13,7 @@ window.addEventListener("load", function(event) { // Событие происх
 })
 
 window.addEventListener('beforeunload', (event) => { // Спросить пользователя, действительно ли он хочет покинуть страницу
-	// Отмените событие, как указано в стандарте.
+	// Отменить событие, как указано в стандарте.
 	event.preventDefault();
 	// Chrome требует установки возвратного значения.
 	event.returnValue = '';

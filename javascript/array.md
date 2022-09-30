@@ -173,7 +173,7 @@ console.log(array1);
 // Syntax
 // Functionless
 arr.sort()
-// Arrow function
+// Arrow function (number sort)
 arr.sort((a, b) => { return a - b; } )
 // Compare function
 arr.sort(compareFn)
