@@ -2,8 +2,10 @@
 
 ### GIT
 
-Basic Git commands [Git](git/git.md)
+[Git](git/git.md) — Git commands
 
-Basic Vim commands [Vim](git/vim.md)
+[Vim](git/vim.md) — Vim commands
 
 ### JavaScript
+
+[JavaScript](javascript/javascript.md) — JavaScript manual

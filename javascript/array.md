@@ -240,4 +240,4 @@ console.log(Array.isArray([1, 2, 3]))
 // expected output: true
 ```
 ---
-[Home](/) > [JavaScript](/javascript)
+[Home](/) > [JavaScript](javascript.md)
