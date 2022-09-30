@@ -299,4 +299,5 @@
 | `s` or `squash`                 | Add to previous commit with his commit message |
 | `d` or `drop`                   | Remove commit                                  |
 
-
+---
+[Home](/README.md)

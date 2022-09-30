@@ -36,4 +36,4 @@ xhr.send(body)
 ```
 
 ---
-[Home](/) > [JavaScript](javascript.md)
+[Home](/README.md) > [JavaScript](javascript.md)

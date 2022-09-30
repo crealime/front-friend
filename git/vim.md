@@ -19,3 +19,7 @@ Hit the Esc key or Ctrl (Command on Mac) + C to enter "Normal mode". Then you ca
 You can also exit Vim directly from "Normal mode" by typing ZZ to save and quit (same as :x) or ZQ to just quit (same as :q!). (Note that case is important here. ZZ and zz do not mean the same thing.)
 
 Vim has extensive help - that you can access with the :help command - where you can find answers to all your questions and a tutorial for beginners.
+
+---
+[Home](/README.md)
+

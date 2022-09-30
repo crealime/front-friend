@@ -226,7 +226,7 @@ console.log(sumWithInitial);
 // expected output: 10
 ```
 
-[reduceRight](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) — 
+[reduceRight](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) — apply a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
 ```javascript
 const array1 = [[0, 1], [2, 3], [4, 5]];
 const result = array1.reduceRight((accumulator, currentValue) => accumulator.concat(currentValue));
@@ -240,4 +240,4 @@ console.log(Array.isArray([1, 2, 3]))
 // expected output: true
 ```
 ---
-[Home](/) > [JavaScript](javascript.md)
+[Home](/README.md) > [JavaScript](javascript.md)
