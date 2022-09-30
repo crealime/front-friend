@@ -16,7 +16,6 @@ function loadGrain(levels) {
       currentAmount = 0
     }
 
-
     if (levs[i - 1] > lev && lev <= levs[i + 1] && levs[i + 1] < acc.middle && levs[i + 1] < levs[i - 1]) {
       // console.log(-1, acc.amount)
       return {
