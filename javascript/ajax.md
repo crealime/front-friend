@@ -1,7 +1,6 @@
 ## [Ajax](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX "Ajax")
 
 ### Get Ajax request via XMLHttpRequest
-
 ```javascript
 const xhr = new XMLHttpRequest()
 xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts')
@@ -16,7 +15,6 @@ xhr.send()
 ```
 
 ### Post Ajax request via XMLHttpRequest
-
 ```javascript
 let body = JSON.stringify({
 	title: 'foo',
