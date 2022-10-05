@@ -20,7 +20,7 @@ window.onbeforeunload = (event) => {}
 
 [click](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) — element receives a click event when a pointing device button (such as a mouse's primary mouse button) is both pressed and released while the pointer is located inside the element.
 ```javascript
-element.addEventListener('click', function (event) {
+el.addEventListener('click', function (event) {
   event.preventDefault() // revoke default event
   console.log('this') // object on which the event fired
   console.log(event) // event information
@@ -34,62 +34,68 @@ element.addEventListener('click', function (event) {
 
 [change](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event) — event is fired for input, select, and textarea elements when the user modifies the element's value. Unlike the input event, the change event is not necessarily fired for each alteration to an element's value.
 ```javascript
-addEventListener('change', (event) => {});
-onchange = (event) => {};
+el.addEventListener('change', (event) => {})
+el.onchange = (event) => {}
 ```
 
 [input](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event) —event fires when the value of an input, select, or textarea element has been changed.
 ```javascript
-addEventListener('input', (event) => {});
-oninput = (event) => { };
+el.addEventListener('input', (event) => {})
+el.oninput = (event) => { }
 ```
 
 [mousedown](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousedown_event) — event is fired at an Element when a pointing device button is pressed while the pointer is inside the element.
 ```javascript
-addEventListener('mousedown', (event) => {});
-onmousedown = (event) => {};
+el.addEventListener('mousedown', (event) => {})
+el.onmousedown = (event) => {}
 ```
 
 [mouseup](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseup_event) — event is fired at an Element when a button on a pointing device (such as a mouse or trackpad) is released while the pointer is located inside it.
 ```javascript
-addEventListener('mouseup', (event) => {});
-onmouseup = (event) => {};
+el.addEventListener('mouseup', (event) => {})
+el.onmouseup = (event) => {}
 ```
 
 [mouseover](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event) — event is fired at an Element when a pointing device (such as a mouse or trackpad) is used to move the cursor onto the element or one of its child elements.
 ```javascript
-addEventListener('mouseover', (event) => {});
-onmouseover = (event) => {};
+el.addEventListener('mouseover', (event) => {})
+el.onmouseover = (event) => {}
 ```
 
 [mouseout](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseout_event) — event is fired at an Element when a pointing device (usually a mouse) is used to move the cursor so that it is no longer contained within the element or one of its children.
 ```javascript
-addEventListener('mouseout', (event) => {});
-onmouseout = (event) => {};
+el.addEventListener('mouseout', (event) => {})
+el.onmouseout = (event) => {}
 ```
 
 [mouseenter](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseenter_event) — event is fired at an Element when a pointing device (usually a mouse) is initially moved so that its hotspot is within the element at which the event was fired. Does not bubble.
 ```javascript
-addEventListener('mouseenter', (event) => {});
-onmouseenter = (event) => {};
+el.addEventListener('mouseenter', (event) => {})
+el.onmouseenter = (event) => {}
 ```
 
 [mouseleave](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseleave_event) — event is fired at an Element when the cursor of a pointing device (usually a mouse) is moved out of it. Does not bubble
 ```javascript
-addEventListener('mouseleave', (event) => {});
-onmouseleave = (event) => {};
+el.addEventListener('mouseleave', (event) => {})
+el.onmouseleave = (event) => {}
 ```
 
 [contextmenu](https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event) — event fires when the user attempts to open a context menu. This event is typically triggered by clicking the right mouse button, or by pressing the context menu key.
 ```javascript
-addEventListener('contextmenu', (event) => {});
-oncontextmenu = (event) => {};
+el.addEventListener('contextmenu', (event) => {})
+el.oncontextmenu = (event) => {}
+```
+
+[scroll](https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event) — event fires when the document view has been scrolled.
+```javascript
+el.addEventListener('scroll', (event) => {})
+el.onscroll = (event) => {}
 ```
 
 [resize](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event) — event fires when the document view (window) has been resized.
 ```javascript
-addEventListener('resize', (event) => {});
-onresize = (event) => {};
+el.addEventListener('resize', (event) => {})
+el.onresize = (event) => {}
 ```
 
 ---

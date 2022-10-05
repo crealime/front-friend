@@ -6,5 +6,7 @@
 
 ### [Manipulation](dom-manipulation.md)
 
+### [Size / Position](dom-size-position.md)
+
 ---
 [Home](/README.md) > [JavaScript](javascript.md)
