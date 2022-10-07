@@ -25,5 +25,22 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
   .then(json => console.log(json))
   .catch(error => console.log(error))
 ```
+### Example with try / catch
+```javascript
+try {
+  return fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => {
+      if (!response.ok) {
+        console.error(response.statusText)
+        return Promise.reject(response.statusText)
+      }
+      return response.json()
+    })
+}
+catch (err) {
+  console.error(err)
+  return Promise.reject(err)
+}
+```
 ---
 [Home](/README.md) > [JavaScript](javascript.md)

@@ -62,9 +62,8 @@ el.offsetTop
 el.offsetLeft
 ```
 
-
-[clientTop]() |
-[clientLeft]() — 
+[clientTop](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientTop) 
+[clientLeft](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientLeft) — The width of the left (top) border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right-to-left and if there is an overflow causing a left vertical scrollbar to be rendered. clientLeft does not include the left margin or the left padding. clientLeft is read-only.
 ```javascript
 el.clientTop
 el.clientLeft
