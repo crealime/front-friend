@@ -79,6 +79,11 @@ if (parentElement.hasChildNodes()) {
 el.offsetParent
 ```
 
+[elementFromPoint]() — return the topmost Element at the specified coordinates (relative to the viewport).
+```javascript
+const el = document.elementFromPoint(200, 200)
+```
+
 [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) — property of the Element interface gets and sets the value of the class attribute of the specified element.
 ```javascript
 const el = document.getElementById('item')

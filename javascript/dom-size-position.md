@@ -23,22 +23,11 @@ let elWidth = window.scrollWidth
 let elHeight = window.scrollHeight
 ```
 
-[offsetWidth]() |
-[offsetHeight]() — read-only property returns the layout width (height) of an element as an integer.
+[offsetWidth](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth) |
+[offsetHeight](https://developer.mozilla.org/ru/docs/Web/API/HTMLElement/offsetHeight) — read-only property returns the layout width (height) of an element as an integer.
 ```javascript
 el.offsetWidth
 el.offsetHeight
-```
-
-[]() —
-```javascript
-
-```
-
-
-[]() —
-```javascript
-
 ```
 
 Cross-browser size of the entire document
@@ -55,8 +44,15 @@ let documentHeight = Math.max(
 )
 ```
 
+[clientWidth](https://developer.mozilla.org/ru/docs/Web/API/Element/clientWidth) |
+[clientHeight](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight) — property is zero for inline elements and elements with no CSS; otherwise, it's the inner width (height) of an element in pixels. It includes padding but excludes borders, margins, and vertical scrollbars (if present).
+```javascript
+el.clientWidth
+el.clientHeight
+```
+
 [offsetTop](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop) |
-[offsetLeft](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft) — read-only property returns the distance of the outer border of the current element relative to the inner border of the top (left) of the offsetParent, the closest positioned ancestor element.
+[offsetLeft](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft) — read-only property returns the distance of the outer border of the current element relative to the inner border of the top (left) of the `offsetParent`, the closest positioned ancestor element.
 ```javascript
 el.offsetTop
 el.offsetLeft
@@ -67,6 +63,17 @@ el.offsetLeft
 ```javascript
 el.clientTop
 el.clientLeft
+```
+
+[]() —
+```javascript
+
+```
+
+
+[]() —
+```javascript
+
 ```
 
 [getBoundingClientRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) — return a DOMRect object providing information about the size of an element and its position relative to the viewport.
