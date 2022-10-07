@@ -25,6 +25,7 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
   .then(json => console.log(json))
   .catch(error => console.log(error))
 ```
+
 ### Example with try / catch
 ```javascript
 try {
