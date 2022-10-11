@@ -2,7 +2,11 @@
 
 ### [DOM](dom.md)
 
+### [String](string.md)
+
 ### [Array](array.md)
+
+### [Object](object.md)
 
 ### [Ajax](ajax.md)
 
