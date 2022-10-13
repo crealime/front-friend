@@ -1,4 +1,4 @@
-## Promise
+## [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 The Promise object is used for deferred and asynchronous evaluation.
 

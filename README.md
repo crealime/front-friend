@@ -1,8 +1,11 @@
 ## FRONT-FRIEND
 
-### [Git](git/git.md) — Git commands
+### [HTML](html/html.md)
 
-### [Vim](git/vim.md) — Vim commands
+### [CSS](javascript/javascript.md) — JavaScript manual
 
 ### [JavaScript](javascript/javascript.md) — JavaScript manual
 
+### [Git](git/git.md) — Git commands
+
+### [Vim](git/vim.md) — Vim commands
