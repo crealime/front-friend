@@ -65,17 +65,6 @@ el.clientTop
 el.clientLeft
 ```
 
-[]() —
-```javascript
-
-```
-
-
-[]() —
-```javascript
-
-```
-
 [getBoundingClientRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) — return a DOMRect object providing information about the size of an element and its position relative to the viewport.
 ```javascript
 const elem = document.querySelector('div')
@@ -140,7 +129,6 @@ el.scrollTop
 el.scrollLeft
 ```
 
-
 [scroll]() — scroll the window to a particular place in the document
 ```javascript
 window.scroll(0, 1000)
@@ -166,32 +154,12 @@ window.scrollTo({
 window.scrollBy(0, window.innerHeight)
 ```
 
-[]() —
-```javascript
-
-```
-
-[]() —
-```javascript
-
-```
-
 [scrollIntoView](https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView) — scroll the element's ancestor containers such that the element on which `scrollIntoView()` is called is visible to the user.
 ```javascript
 const el = document.getElementById("box")
 el.scrollIntoView()
 el.scrollIntoView(false)
 el.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
-```
-
-[]() —
-```javascript
-
-```
-
-[]() —
-```javascript
-
 ```
 
 ---
