@@ -153,7 +153,7 @@ Object.seal(obj)
 console.log(Object.isSealed(obj)) // true
 ```
 
-[isPrototypeOf](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf) — checks if an object exists in another object's prototype chain.
+[isPrototypeOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf) — checks if an object exists in another object's prototype chain.
 ```javascript
 function Foo() {}
 function Bar() {}

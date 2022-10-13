@@ -24,7 +24,7 @@ let elHeight = window.scrollHeight
 ```
 
 [offsetWidth](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth) |
-[offsetHeight](https://developer.mozilla.org/ru/docs/Web/API/HTMLElement/offsetHeight) — read-only property returns the layout width (height) of an element as an integer.
+[offsetHeight](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight) — read-only property returns the layout width (height) of an element as an integer.
 ```javascript
 el.offsetWidth
 el.offsetHeight
@@ -44,7 +44,7 @@ let documentHeight = Math.max(
 )
 ```
 
-[clientWidth](https://developer.mozilla.org/ru/docs/Web/API/Element/clientWidth) |
+[clientWidth](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth) |
 [clientHeight](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight) — property is zero for inline elements and elements with no CSS; otherwise, it's the inner width (height) of an element in pixels. It includes padding but excludes borders, margins, and vertical scrollbars (if present).
 ```javascript
 el.clientWidth
@@ -149,12 +149,12 @@ window.scrollTo({
 })
 ```
 
-[scrollBy](https://developer.mozilla.org/ru/docs/Web/API/Window/scrollBy) — scroll the document in the window by the given amount.
+[scrollBy](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy) — scroll the document in the window by the given amount.
 ```javascript
 window.scrollBy(0, window.innerHeight)
 ```
 
-[scrollIntoView](https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView) — scroll the element's ancestor containers such that the element on which `scrollIntoView()` is called is visible to the user.
+[scrollIntoView](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView) — scroll the element's ancestor containers such that the element on which `scrollIntoView()` is called is visible to the user.
 ```javascript
 const el = document.getElementById("box")
 el.scrollIntoView()

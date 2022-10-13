@@ -6,7 +6,7 @@
 element.innerText
 ```
 
-[textContent](https://developer.mozilla.org/ru/docs/Web/API/Node/textContent) — property of the Node interface represents the text content of the node and its descendants.
+[textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) — property of the Node interface represents the text content of the node and its descendants.
 ```javascript
 element.textContent
 ```
@@ -63,7 +63,7 @@ const someText = document.createTextNode('Some text')
 const paragraph = document.body.appendChild(document.createElement('p'))
 ```
 
-[append](https://developer.mozilla.org/ru/docs/Web/API/Element/append) — insert a set of Node objects or string objects after the last child of the Element. String objects are inserted as equivalent Text nodes.
+[append](https://developer.mozilla.org/en-US/docs/Web/API/Element/append) — insert a set of Node objects or string objects after the last child of the Element. String objects are inserted as equivalent Text nodes.
 ```javascript
 const div = document.createElement("div")
 const p = document.createElement("p")
