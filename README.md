@@ -2,7 +2,7 @@
 
 ### [HTML](html/html.md)
 
-### [CSS](javascript/javascript.md) — JavaScript manual
+### [CSS](css/css.md) — JavaScript manual
 
 ### [JavaScript](javascript/javascript.md) — JavaScript manual
 
