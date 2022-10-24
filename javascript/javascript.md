@@ -8,15 +8,17 @@
 
 ### [Object](object.md)
 
+### [Function](function.md)
+
 ### [Ajax](ajax.md)
 
 ### [Fetch](fetch.md)
 
-### [OOP](oop.md)
+### [Math](math.md)
 
 ### [Export / Import](export-import.md)
 
-### [Math](math.md)
+### [OOP](oop.md)
 
 ---
 [Home](/README.md)

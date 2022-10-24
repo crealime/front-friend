@@ -163,5 +163,67 @@ console.log(Foo.prototype.isPrototypeOf(bar)) // -> true
 console.log(Bar.prototype.isPrototypeOf(bar)) // -> true
 ```
 
+[defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) — defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
+```javascript
+const person = {login: ''}
+Object.defineProperty(person, 'name', {
+  configurable: false, // Forbidden to delete
+  writable: false, // Forbidden to change
+  enumerable: false, // Forbidden to enumerate in a loop
+  value: 'Serhii' // Value of the property
+})
+console.log(person.name) // -> Serhii
+person.name = 'Vladlen'
+console.log(person.name) // -> Serhii
+
+Object.defineProperty(person, 'nickname', {
+  get: function() {
+    return this.login
+  },
+  set: function(newValue) {
+    this.login = newValue.toLowerCase()
+  }
+})
+person.nickname = 'Deveb'
+console.log(person.nickname) // -> deveb
+```
+
+[defineProperties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties) — defines new or modifies existing properties directly on an object, returning the object.
+```javascript
+const obj = {}
+Object.defineProperties(obj, {
+  property1: {
+    value: 42,
+    writable: true
+  },
+  property2: {}
+});
+console.log(obj.property1) // -> 42
+```
+
+[get](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) — binds an object property to a function that will be called when that property is looked up.
+```javascript
+const obj = {
+  log: ['a', 'b', 'c'],
+  get latest() {
+    return this.log[this.log.length - 1]
+  }
+}
+console.log(obj.latest) // -> c
+```
+
+[set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) — binds an object property to a function to be called when there is an attempt to set that property.
+```javascript
+const languages = {
+  log: [],
+  set current(name) {
+    this.log.push(name)
+  }
+}
+languages.current = 'EN'
+languages.current = 'FA'
+console.log(languages.log) // -> ['EN', 'FA']
+```
+
 ---
 [Home](/README.md) > [JavaScript](javascript.md)
