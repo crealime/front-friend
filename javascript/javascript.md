@@ -16,5 +16,7 @@
 
 ### [Export / Import](export-import.md)
 
+### [Math](math.md)
+
 ---
 [Home](/README.md)
