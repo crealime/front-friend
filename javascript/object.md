@@ -121,6 +121,12 @@ const obj = Object.fromEntries(entries)
 console.log(obj) // -> { foo: "bar", baz: 42 }
 ```
 
+[in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) — returns true if the specified property is in the specified object or its prototype chain.
+```javascript
+const car = {make: 'Honda', model: 'Accord', year: 1998}
+console.log('make' in car) // -> true
+```
+
 [freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) — freezes an object. Freezing an object prevents extensions and makes existing properties non-writable and non-configurable. A frozen object can no longer be changed: new properties cannot be added, existing properties cannot be removed, their enumerability, configurability, writability, or value cannot be changed, and the object's prototype cannot be re-assigned. freeze() returns the same object that was passed in.
 ```javascript
 const obj = {

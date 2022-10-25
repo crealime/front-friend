@@ -9,9 +9,7 @@ function createPerson(name, age, job) {
   obj.name = name
   obj.age = age
   obj.job = job
-  obj.sayName = function() {
-    return this.name
-  }
+  obj.sayName = function() {return this.name}
   return obj
 }
 const personOne = createPerson('Serhii', 29, 'Developer')
@@ -24,9 +22,7 @@ function Person(name, age, job) {
   this.name = name
   this.age = age
   this.job = job
-  this.sayName = function() {
-    return this.name
-  }
+  this.sayName = function() {return this.name}
 }
 const personOne = new Person('Serhii', 29, 'Developer')
 const personTwo = new Person('Olena', 27, 'Designer')
@@ -39,6 +35,69 @@ console.log(window.sayName) // -> John
 const obj = {}
 Person.call(obj, 'Kelly', 25, 'Cook')
 console.log(obj.sayName()) // -> Kelly
+```
+
+### Prototype pattern
+```javascript
+function Person() {}
+Person.prototype.name = 'Serhii'
+Person.prototype.age = 29
+Person.prototype.job = 'Developer'
+Person.prototype.sayName = function() {return this.name}
+// Or.
+Person.prototype = {
+  name: 'Serhii',
+  age: 29,
+  job: 'Developer',
+  sayName: function() {return this.name}
+}
+Object.defineProperty (Person.prototype, "constructor", {
+  enumerable: false,
+  value: Person
+})
+
+Person.prototype.age = 29
+Person.prototype.job = 'Developer'
+Person.prototype.sayName = function() {return this.name}
+
+const personOne = new Person
+const personTwo = new Person
+
+console.log(personOne.sayName()) // -> Serhii
+console.log(personTwo.sayName()) // -> Serhii
+console.log(personOne.sayName() === personTwo.sayName()) // -> true
+console.log(Person.prototype.isPrototypeOf(personOne)) // -> true
+console.log(Object.getPrototypeOf(personOne) === Person.prototype) // -> true
+console.log(Object.getPrototypeOf(personOne).name) // -> Serhii
+```
+
+### Prototype + Constructor
+```javascript
+function Person(name, age, job) {
+  this.name = name
+  this.age = age
+  this.job = job
+  this.friends = ['Oleh', 'Boris', 'Olha']
+}
+Person.prototype = {
+  constructor: Person,
+  sayName: function() {return this.name}
+}
+const personOne = new Person('Serhii', 29, 'Developer')
+```
+
+### Parasitic constructor pattern
+Instanceof operator doesn't work with this pattern
+```javascript
+function createPerson(name, age, job) {
+  const obj = {}
+  obj.name = name
+  obj.age = age
+  obj.job = job
+  obj.sayName = function() {return this.name}
+  return obj
+}
+const personOne = new Person('Serhii', 29, 'Developer')
 ```
 
 
