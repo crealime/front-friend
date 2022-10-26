@@ -1,31 +1,16 @@
-function generalObject(obj) {
-  function Foo() {}
-  Foo.prototype = obj
-  return new Foo
-}
-
-function inheritPrototype(subType, superType) {
-  const proto = generalObject(superType.prototype) // Create an object
-  proto.constructor = subType // Extension of the object
-  subType.prototype = proto // Purpose of the object
-}
-
-function SuperType(name) {
+function Person(name, age, job) {
   this.name = name
+  this.age = age
+  this.job = job
   this.friends = ['Oleh', 'Boris', 'Olha']
 }
-SuperType.prototype.getName = function() {return this.name}
-
-function SubType(name, age) {
-  SuperType.call(this, name)
-  this.age = age
+Person.prototype = {
+  constructor: Person,
+  getName: function() {return this.name}
 }
-inheritPrototype(SubType, SuperType)
-SubType.prototype.getAge = function() {return this.age}
-
-const personOne = new SubType('Serhii', 29)
-const personTwo = new SubType('Olena', 27)
+const personOne = new Person('Serhii', 29, 'Developer')
+const personTwo = new Person('Olena', 27, 'Designer')
 personTwo.friends.push('Svetlana')
 
-console.log(personOne.getName(), personOne.getAge(), personOne.friends)
-console.log(personTwo.getName(), personTwo.getAge(), personTwo.friends)
+console.log(personOne.friends) // -> [ 'Oleh', 'Boris', 'Olha' ]
+console.log(personTwo.friends) // -> [ 'Oleh', 'Boris', 'Olha', 'Svetlana' ]

@@ -70,7 +70,7 @@ console.log(Object.getPrototypeOf(personOne) === Person.prototype) // -> true
 console.log(Object.getPrototypeOf(personOne).name) // -> Serhii
 ```
 
-### Prototype + Constructor
+### Prototype + Constructor  (best practice)
 ```javascript
 function Person(name, age, job) {
   this.name = name
@@ -82,7 +82,13 @@ Person.prototype = {
   constructor: Person,
   getName: function() {return this.name}
 }
+
 const personOne = new Person('Serhii', 29, 'Developer')
+const personTwo = new Person('Olena', 27, 'Designer')
+personTwo.friends.push('Svetlana')
+
+console.log(personOne.friends) // -> [ 'Oleh', 'Boris', 'Olha' ]
+console.log(personTwo.friends) // -> [ 'Oleh', 'Boris', 'Olha', 'Svetlana' ]
 ```
 
 ### Parasitic constructor pattern
@@ -133,7 +139,7 @@ console.log(instanceOne.numbers) // -> [ 1, 2, 3, 4, 5 ]
 console.log(instanceTwo.numbers) // -> [ 1, 2, 3 ]
 ```
 
-### Combination inheritance
+### Combination inheritance (best practice)
 ```javascript
 function SuperType(color) {
   this.color = color
@@ -183,7 +189,7 @@ personTwo.friends.push('Freya')
 console.log(personOne) // -> { name: 'Serhii', friends: [ 'Oleh', 'Boris', 'Olha', 'Freya' ] }
 ```
 
-### Parasitic combined inheritance
+### Parasitic combined inheritance (best practice)
 ```javascript
 function generalObject(obj) {
   function Foo() {}
