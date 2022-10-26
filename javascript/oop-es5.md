@@ -27,6 +27,8 @@ const personOne = new Person('Serhii', 29, 'Developer')
 const personTwo = new Person('Olena', 27, 'Designer')
 console.log(personOne.constructor === Person) // -> true
 console.log(personOne instanceof Person) // -> true
+console.log(Person.prototype.constructor === Person) // -> true
+console.log(personOne.__proto__ === Person.prototype) // -> true
 
 Person('John', 35, 'Doctor')
 console.log(window.getName) // -> John
