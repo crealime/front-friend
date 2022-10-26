@@ -18,7 +18,9 @@
 
 ### [Export / Import](export-import.md)
 
-### [OOP](oop.md)
+### [OOP-ES5](oop-es5.md)
+
+### [OOP-ES6](oop-es6.md)
 
 ---
 [Home](/README.md)
