@@ -9,3 +9,5 @@
 ### [Git](git/git.md) — Git commands
 
 ### [Vim](git/vim.md) — Vim commands
+
+### [Features](features/features.md)
