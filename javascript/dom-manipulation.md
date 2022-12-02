@@ -108,4 +108,4 @@ el.setAttribute("name", "helloButton")
 ```
 
 ---
-[Home](/README.md) > [JavaScript](javascript.md) > [DOM](dom.md)
+[Home](../README.md) > [JavaScript](javascript.md) > [DOM](dom.md)

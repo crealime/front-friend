@@ -61,4 +61,4 @@ function fadeOut(element, duration, delay) {
 ```
 
 ---
-[Home](/README.md) > [Features](features.md)
+[Home](../README.md) > [Features](features.md)

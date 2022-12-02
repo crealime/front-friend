@@ -143,4 +143,4 @@ console.log(str.trim()) // -> Hello world!
 ```
 
 ---
-[Home](/README.md) > [JavaScript](javascript.md)
+[Home](../README.md) > [JavaScript](javascript.md)

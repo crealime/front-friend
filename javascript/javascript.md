@@ -23,4 +23,4 @@
 ### [OOP-ES6](oop-es6.md)
 
 ---
-[Home](/README.md)
+[Home](../README.md)

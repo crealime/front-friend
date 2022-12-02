@@ -9,4 +9,4 @@
 ### [Size / Position](dom-size-position.md)
 
 ---
-[Home](/README.md) > [JavaScript](javascript.md)
+[Home](../README.md) > [JavaScript](javascript.md)

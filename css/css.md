@@ -5,4 +5,4 @@
 ### [Grid layout](grid-layout.md)
 
 ---
-[Home](/README.md)
+[Home](../README.md)

@@ -196,4 +196,4 @@ console.log(result) // -> [4, 5, 2, 3, 0, 1]
 console.log(Array.isArray([1, 2, 3])) // -> true
 ```
 ---
-[Home](/README.md) > [JavaScript](javascript.md)
+[Home](../README.md) > [JavaScript](javascript.md)

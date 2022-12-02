@@ -229,4 +229,4 @@ console.log(personTwo.getName(), personTwo.getAge(), personTwo.friends)
 ```
 
 ---
-[Home](/README.md) > [JavaScript](javascript.md)
+[Home](../README.md) > [JavaScript](javascript.md)

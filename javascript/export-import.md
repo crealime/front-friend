@@ -50,4 +50,4 @@ import "module-name"
 ```
 
 ---
-[Home](/README.md) > [JavaScript](javascript.md)
+[Home](../README.md) > [JavaScript](javascript.md)

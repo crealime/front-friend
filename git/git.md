@@ -300,4 +300,4 @@
 | `d` or `drop`                   | Remove commit                                  |
 
 ---
-[Home](/README.md)
+[Home](../README.md)

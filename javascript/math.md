@@ -81,4 +81,4 @@ console.log(calcHypotenuse(5, 12)) // -> 13
 ```
 
 ---
-[Home](/README.md) > [JavaScript](javascript.md)
+[Home](../README.md) > [JavaScript](javascript.md)

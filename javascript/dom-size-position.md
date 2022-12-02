@@ -163,4 +163,4 @@ el.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
 ```
 
 ---
-[Home](/README.md) > [JavaScript](javascript.md) > [DOM](dom.md)
+[Home](../README.md) > [JavaScript](javascript.md) > [DOM](dom.md)

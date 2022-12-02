@@ -232,4 +232,4 @@ console.log(languages.log) // -> ['EN', 'FA']
 ```
 
 ---
-[Home](/README.md) > [JavaScript](javascript.md)
+[Home](../README.md) > [JavaScript](javascript.md)
