@@ -25,7 +25,7 @@ const user = {
 	happy: true
 }
 
-console.log(getFullName(user))
+console.log(getFullName(user)) // -> Serhii Somersby
 ```
 
 Object
@@ -42,7 +42,7 @@ const info: {
 	}
 } = {
 	"officeId": 45,
-	"isOpened": false,
+	"isOpened": true,
 	"contacts": {
 		"phone": "+155500000000",
 		"email": "some@email.com",
@@ -53,20 +53,11 @@ const info: {
 }
 ```
 
-Array
+Array of strings
 ```typescript
-
+const skills: string[] = ['Dev', 'Devops', 'Designer', 'Writer']
+console.log(skills.filter((skill: string) => skill !== 'Writer')) // -> [ 'Dev', 'Devops', 'Designer' ]
 ```
-
-
-
-
-
-
-
-
-
-
 
 ---
 [Home](../README.md) > [Typescript](typescript.md)
